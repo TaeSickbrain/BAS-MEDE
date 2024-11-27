@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .header {
+            background-color: #add8e6;
+            padding: 15px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #000;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 80%;
+        }
+        .section-title {
+            background-color: #add8e6;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 80%;
+        }
+        .content-box {
+            background-color: #e6f7ff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            margin: 20px auto;
+            text-align: left;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .content-box ul {
+            list-style-type: disc;
+            padding-left: 40px;
+        }
+        .developers-box {
+            background-color: #e6f7ff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            height: 150px;
+            margin: 20px auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .back-button {
+            background-color: #add8e6;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #000;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 20px auto;
+            width: 100px;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #87ceeb;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">ABOUT US</div>
+    <div class="section-title">What is BAS?</div>
+    <div class="content-box">
+        BAS is a system which helps reminding elderly people to take their medicine and track medication adherence. It has three components:
+        <ul>
+            <li><strong>Medicine Storage:</strong> Controlled by ESP-32. Used to dispense medicine.</li>
+            <li><strong>Band:</strong> To notify users to take their medicine.</li>
+            <li><strong>Application:</strong> To keep track of users' medication adherence and set reminders.</li>
+        </ul>
+    </div>
+    <div class="section-title">Developers team</div>
+    <div class="developers-box">
+        <!-- Developer information can be added here -->
+    </div>
+    <button class="back-button" onclick="goBack()">BACK</button>
+
+    <script>
+        function goBack() {
+            // Navigate back to the BAS-MEDE Home Page
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

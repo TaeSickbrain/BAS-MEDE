@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .header {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 20px;
+            color: #000;
+        }
+        .message-box {
+            background-color: #e6f7ff;
+            width: 80%;
+            height: 100px;
+            margin: 15px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .back-button {
+            background-color: #add8e6;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #000;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 20px auto;
+            width: 100px;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #87ceeb;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">How to Use?</div>
+    <div class="message-box"></div>
+    <div class="message-box"></div>
+    <div class="message-box"></div>
+    <div class="message-box"></div>
+    <button class="back-button" onclick="goBack()">BACK</button>
+
+    <script>
+        function goBack() {
+            // Navigate back to the BAS-MEDE Home Page
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

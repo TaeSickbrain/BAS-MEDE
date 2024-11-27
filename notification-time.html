@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification Time</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .header {
+            background-color: #add8e6;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 80%;
+        }
+        .time-input-container {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            margin: auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .time-input-container select {
+            font-size: 18px;
+            padding: 5px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .modern-button {
+            width: 120px;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #000;
+            background-color: #add8e6;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 10px 5px;
+            transition: background-color 0.3s ease;
+        }
+        .modern-button:hover {
+            background-color: #87ceeb;
+        }
+        .time-set {
+            background-color: #add8e6;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #000;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 80%;
+        }
+        .message-box {
+            background-color: #e6f7ff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            height: 100px;
+            margin: auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .back-button {
+            background-color: #add8e6;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #000;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 20px auto;
+            width: 100px;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #87ceeb;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Notification Time</div>
+    <div class="time-input-container">
+        <label for="hour">Select Time</label><br>
+        <select id="hour">
+            <option value="" disabled selected>Hour</option>
+            <!-- Generate options for 24 hours -->
+            <script>
+                for (let i = 0; i < 24; i++) {
+                    document.write(`<option value="${i}">${i.toString().padStart(2, '0')}</option>`);
+                }
+            </script>
+        </select>
+        :
+        <select id="minute">
+            <option value="" disabled selected>Minute</option>
+            <!-- Generate options for 60 minutes -->
+            <script>
+                for (let i = 0; i < 60; i++) {
+                    document.write(`<option value="${i}">${i.toString().padStart(2, '0')}</option>`);
+                }
+            </script>
+        </select><br>
+        <button class="modern-button" onclick="cancelTime()">Cancel</button>
+        <button class="modern-button" onclick="okTime()">OK</button>
+    </div>
+    <div class="time-set">Time set</div>
+    <div class="message-box" id="message-box"></div>
+    <button class="back-button" onclick="navigateBack()">BACK</button>
+
+    <script>
+        function cancelTime() {
+            document.getElementById('hour').value = "";
+            document.getElementById('minute').value = "";
+            document.getElementById('message-box').innerText = "Time input canceled.";
+        }
+
+        function okTime() {
+            const hour = document.getElementById('hour').value;
+            const minute = document.getElementById('minute').value;
+            if (hour && minute) {
+                document.getElementById('message-box').innerText = `Time set to ${hour}:${minute}.`;
+            } else {
+                document.getElementById('message-box').innerText = "Please select a valid time.";
+            }
+        }
+
+        function navigateBack() {
+            // Navigate back to the BAS-MEDE page
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

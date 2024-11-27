@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAS-MEDE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .logo {
+            margin-top: 20px;
+        }
+        .logo img {
+            width: 250px;
+            height: auto;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 10px 0;
+        }
+        .subtitle {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+        .menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .menu button {
+            width: 200px;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #000;
+            background-color: #add8e6;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+        .menu button:hover {
+            background-color: #87ceeb;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="logo.png" alt="BAS-MEDE Logo">
+    </div>
+    <div class="title">BAS-MEDE</div>
+    <div class="subtitle">"For your beloved elders"</div>
+    <div class="menu">
+        <button onclick="navigateToNotification()">Set Notification Time</button>
+        <button onclick="navigateToMedicationHistory()">Medication History</button>
+        <button onclick="navigateToAboutUs()">About Us</button>
+        <button onclick="navigateToHowToUse()">How to Use?</button>
+    </div>
+
+    <script>
+        function navigateToNotification() {
+            // Navigate to the Notification Time page
+            window.location.href = "notification-time.html";
+        }
+
+        function navigateToMedicationHistory() {
+            // Navigate to the Medication History page
+            window.location.href = "medication-history.html";
+        }
+
+        function navigateToAboutUs() {
+            // Navigate to the About Us page
+            window.location.href = "about-us.html";
+        }
+
+        function navigateToHowToUse() {
+            // Navigate to the How to Use page
+            window.location.href = "how-to-use.html";
+        }
+    </script>
+</body>
+</html>
